@@ -9,6 +9,7 @@ Our model SSDRec is implemented based on the RecBole v1.0.1. Both the processing
 * openpyxl 3.0.9+
 * RecBole 1.0.1+
 * tqdm 4.64.0
+  
 Specifically, we implement the denoising function in the third stage of SSDRec by integrating {HSD}(https://github.com/zc-97/HSD)
 
 ## Preparing Environment
