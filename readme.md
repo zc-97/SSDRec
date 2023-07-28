@@ -10,7 +10,7 @@ Our model SSDRec is implemented based on the RecBole v1.0.1. Both the processing
 * RecBole 1.0.1+
 * tqdm 4.64.0
   
-Specifically, we implement the denoising function in the third stage of SSDRec by integrating {HSD}(https://github.com/zc-97/HSD)
+Specifically, we implement the denoising function in the third stage of SSDRec by integrating with [HSD](https://github.com/zc-97/HSD)
 
 ## Preparing Environment
 ***
