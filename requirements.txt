@@ -1,0 +1,6 @@
+numpy==1.20.3
+openpyxl==3.0.9
+PyYAML==6.0
+recbole==1.0.1
+torch==1.12.0
+tqdm==4.62.3
