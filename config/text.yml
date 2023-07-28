@@ -1,0 +1,60 @@
+#General Hyper Parameters:
+gpu_id: 0
+use_gpu: True
+seed: 42
+is_dna: True
+
+#Training Hyper Parameters:
+epochs: 300
+train_batch_size: 256
+#train_batch_size: 512
+learner: adam
+#learning_rate: 1e-3
+#neg_sampling: None
+#neg_sampling: {'popularity': 1}
+eval_step: 1
+stopping_step: 10
+clip_grad_norm: {'max_norm': 5.0, 'norm_type': 2}
+weight_decay: 1e-4
+
+# scheduler
+scheduler: False
+step_size: 5
+gamma: 0.1
+
+#Evaluation Hyper Parameters:
+eval_args:
+  group_by: user
+  order: TO
+  split: {'LS': 'valid_and_test'}
+  mode: 'full'
+
+repeatable: True
+#metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+metrics: ['Hit', 'NDCG', 'MRR']
+
+topk: [1, 5, 10, 20]
+#valid_metric: MRR@10
+valid_metric: Hit@20
+#valid_metric: MRR@10
+valid_metric_bigger: True
+eval_batch_size: 4096
+metric_decimal_place: 4
+#Dataset Hyper Parameters:
+#  field_separator:
+#  seq_separator:
+#load_col:
+#  {
+#    'inter':['user_id', 'item_id', 'rating', 'timestamp'],
+#    'item':['movie_title']
+#  }
+#, 'movie_title'
+#Other Hyper Parameters:
+#embedding_size: 64
+#hidden_size: 64
+num_layers: 1
+dropout_prob: 0.3
+loss_type: 'CE'
+initializer_range: 0.02
+
+step: 1
